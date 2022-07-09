@@ -1,0 +1,9 @@
+<div>
+  Template driven forms
+
+  <form #f="ngForm" (ngSubmit)="submit(f)">
+    <label for="firstName">FirstName</label>
+    <input required ngModel id="firstName" name="firstName" type="text" #firstName="ngModel">
+    <button type="submit" [disabled]="!f.valid">Save</button>
+  </form>
+</div>

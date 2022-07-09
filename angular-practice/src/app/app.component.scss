@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  .login-container {
+    form {
+      border: 1px solid gray;
+      height: 10rem;
+      padding: 2rem;
+      .title {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      label {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

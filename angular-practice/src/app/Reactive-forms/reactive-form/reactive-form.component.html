@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+  <input formControlName="userName">
+  <div *ngIf="userName?.touched && form.get('userName')?.invalid">Invalid</div>
+  <input formControlName="passWord">
+  <button type="submit">Login</button>
+</form>
+
+
+
+<form [formGroup]="commentForm" (ngSubmit)="submitComment()">
+  <input formControlName="comment">
+  <button type="submit">Comment</button>
+</form>
