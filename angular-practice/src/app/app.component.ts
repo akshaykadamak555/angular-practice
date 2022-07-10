@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,8 @@ export class AppComponent {
 
   favorite = true;
 
+  constructor(private router: Router){}
+
   loginForm = new FormGroup({
     userId: new FormControl(),
     passWord: new FormControl()
@@ -19,6 +22,10 @@ export class AppComponent {
 
   onChange(event: any) {
     console.log('output event', event);
+  }
+
+  navigate() {
+this.router.navigate(['/crud']);
   }
 
   onSubmit() {

@@ -29,6 +29,9 @@ import { CustomDirectivesComponent } from './Directives/custom-directives/custom
 import { InputFormatDirective } from './Directives/custom-directives/input-format.directive';
 import { ContactFormComponent } from './Template-driven-forms/contact-form/contact-form.component';
 import { ReactiveFormComponent } from './Reactive-forms/reactive-form/reactive-form.component';
+import { DataComponent } from './Consuming-http-services/data/data.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './Consuming-http-services/api.service';
 
 @NgModule({
   declarations: [
@@ -56,16 +59,18 @@ import { ReactiveFormComponent } from './Reactive-forms/reactive-form/reactive-f
     CustomDirectivesComponent,
     InputFormatDirective,
     ContactFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [CourceserviceService],
+  providers: [CourceserviceService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
